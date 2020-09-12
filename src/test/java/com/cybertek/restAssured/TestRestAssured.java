@@ -18,6 +18,10 @@ public class TestRestAssured {
     @Test
     public void getToken(){
         String token = RestAssured.generateToken();
+        Response response = given().header("x-library-token", token)
+                .when().get("http://library1.cybertekschool.com/rest/v1/get_all_users");
+
+                response.prettyPeek();
 
         }
 

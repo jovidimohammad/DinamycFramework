@@ -11,7 +11,7 @@ public class RestAssured {
 
     public static String generateToken(){
         Response response =
-                given().contentType(ContentType.URLENC).formParam("email","libraria69@library")
+                given().contentType(ContentType.URLENC).formParam("email","librarian69@library")
                         .formParam("password","KNPXrm3S").
                         when().post("http://library1.cybertekschool.com/rest/v1/login");
         String token = response.path("token");
